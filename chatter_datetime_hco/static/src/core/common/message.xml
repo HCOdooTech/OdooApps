@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+     <t t-inherit="mail.Message" t-inherit-mode="extension">
+        <xpath expr="//small[@t-if='!message.is_transient']" position="replace">
+            <small t-if="!message.is_transient" class="o-mail-Message-date text-muted opacity-75"
+                   t-att-class="{ 'me-2': !isAlignedRight }" t-att-title="message.datetimeShort">
+                <t t-if="shouldDisplayAuthorName">- </t>
+                <t t-esc="message.datetimeShort"/>
+                <t t-if="shouldDisplayAuthorName"> - </t>
+                <RelativeTime datetime="message.datetime"/>
+                </small>
+        </xpath>
+     </t>
+</templates>
