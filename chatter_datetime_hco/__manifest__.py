@@ -16,7 +16,7 @@ Features:
     'category': 'Productivity',
     'images': ['static/description/banner.png'],
     'depends': ['mail'],
-    'price': 5.99,
+    'price': 4.99,
     'currency': 'USD',
     'assets': {
         'web.assets_backend': [

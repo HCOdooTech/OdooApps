@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POS Payment Line Update</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<main>
+    <div class="contianer" style="font-family: Montserrat;">
+        <div class="px-md-5 py-md-4 p-2 mb-4 shadow-sm "
+             style="background-color: #2575eb0d;border-radius:20px; font-family: Montserrat;">
+            <section class="oe_container pt16 mt16" style="background-color: transparent;">
+                <div class="row o_equal_col_sm" style="max-width:1540px; margin:0 auto; border-radius:15px">
+                    <div class="" style="display:block; margin:0 auto;width:80%">
+                <span style="width:100%; display:inline-block">
+                    <div style="width:100%; height: 70px; display:inline-block"></div>
+                </span>
+                    </div>
+                </div>
+            </section>
+            <div class="px-md-5 py-md-4 p-2 mb-4 shadow" style="
+    margin: auto;box-shadow: -1px 1rem 14rem rgba(0, 0, 0, 0.15) !important;position: relative;
+    bottom: 95px;background-color: #2575eb0d;border-radius:20px; font-family: Montserrat;">
+                <div class="col-12 justify-content-end"
+                     style="padding: 0;text-align: revert;display: flex;justify-content: end;margin-left: 34px;">
+                    <div>
+                        <div style="
+        width: 406px;
+    height: 46px;
+    position: relative;
+    bottom: 13px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+        ">
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="whiteText"
+                    style="font-family: Montserrat;color:#fff !important; font-size:70px; text-align:center;margin-bottom: 9px;">
+              <span class="themeColor"
+                    style="color:#000000 !important; font-weight:600 !important; font-size:48px !important">
+                  POS Payment Line Update
+              </span>
+                </h2>
+                <p style="font-family: Montserrat;font-family: Montserrat;color:#000000; text-align:center; font-size:18px">
+                    This module enhances the <strong>Odoo Point of Sale</strong> experience by automatically resetting
+                    unpaid payment lines whenever a POS order is modified. It ensures payment accuracy and prevents
+                    incorrect totals when products, quantities, prices, or discounts are changed.
+                </p>
+                <p style="font-family: Montserrat;font-family: Montserrat;color:#000000; font-size:18px; text-align:center">
+                    Designed for <strong>Odoo 17</strong>, this lightweight module eliminates payment mismatches by
+                    clearing unpaid payment lines as soon as the order details change, ensuring the payment process
+                    always reflects the latest order state.
+                </p>
+                <p style="font-family: Montserrat;color:#000000; font-size:18px; text-align:center">
+                    If you need to <strong>prevent payment errors</strong>, improve cashier workflow, or ensure accurate
+                    order totals before validation in your POS environment, this module provides a simple and effective
+                    solution.
+                </p>
+                <div class="text-center " style="margin-top: 31px;">
+                    <a href="https://www.linkedin.com/in/hcodoo-tech-191311391" target="_blank"
+                       style="background-color:#6B3F5C !important; border-radius:35px; display:inline-block; padding:7px 33px; font-weight:600; border:1px solid #6B3F5C !important"
+                       class="mx-1 mb-2">
+                        <span class="pl-2" style="font-family: Montserrat;color:#fff; font-size:16px">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <section class="oe_container mt32 mb32" style="background-color: transparent !important;">
+                <div id="loempia_tabs" class="row shadow"
+                     style="padding: 45px;max-width:1540px; margin:0 auto; padding-bottom:64px; border-radius:15px">
+                    <ul role="tablist" class="nav nav-tabs justify-content-center" data-tabs="tabs"
+                        style="border:none; background-color:unset; margin:0 auto;">
+                        <li class="nav-item" style="display: flex;
+    align-items: center;
+    justify-content: center; background-color: #6B3F5C !important; margin-right:10px; border:1px solid #ddd; border-bottom:0">
+                            <a href="#hco_feature" data-bs-toggle="tab" aria-expanded="true" class="show active"
+                               style="font-family: Montserrat; text-transform:uppercase; font-weight:600; font-size:15px; letter-spacing:1px; padding:11px 20px; color:#000; border:1px solid transparent">
+                                <i class="fa fa-check-circle" style="margin-right:6px"></i>Features
+                            </a>
+                        </li>
+                        <li class="nav-item" style="display: flex;
+    align-items: center;
+    justify-content: center; background-color: #6B3F5C !important; margin-right:10px; border:1px solid #ddd; border-bottom:0">
+                            <a href="#hco_screen" data-bs-toggle="tab" aria-expanded="true" class="show"
+                               style="font-family: Montserrat; text-transform:uppercase; font-weight:600; font-size:15px; letter-spacing:1px; padding:11px 20px; color:#000; border:1px solid transparent">
+                                <i class="fa fa-image" style="margin-right:6px"></i>Screenshots
+                            </a>
+                        </li>
+                        <li class="nav-item" style="display: flex;
+    align-items: center;
+    justify-content: center; background-color: #6B3F5C !important; margin-right:10px; border:1px solid #ddd; border-bottom:0">
+                            <a href="#hco_support" data-bs-toggle="tab" aria-expanded="true" class="show"
+                               style="font-family: Montserrat; text-transform:uppercase; font-weight:600; font-size:15px; letter-spacing:1px; padding:11px 20px; color:#000; border:1px solid transparent">
+                                <i class="fa fa-life-ring" style="margin-right:6px"></i>Support
+                            </a>
+                        </li>
+                        <li class="nav-item" style="display: flex;
+    align-items: center;
+    justify-content: center; background-color: #6B3F5C !important; margin-right:10px; border:1px solid #ddd; border-bottom:0">
+                            <a href="#hco_faq" data-bs-toggle="tab" aria-expanded="true" class="show"
+                               style="font-family: Montserrat; text-transform:uppercase; font-weight:600; font-size:15px; letter-spacing:1px; padding:11px 20px; color:#000; border:1px solid transparent">
+                                <i class="fa fa-question-circle" style="margin-right:6px"></i>FAQs
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="container-fluid" style="border-top: 1px solid #c2c2c2;">
+                        <div class="tab-content container pt-3" id="tabs_content">
+                            <!-- Features Tabs -->
+                            <div class="tab-pane active show" id="hco_feature">
+                                <div class="container">
+                                    <ul style="padding:0">
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Automatically clears unpaid payment lines when products are added to the
+                                            order.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Automatically clears unpaid payment lines when products are removed from the
+                                            order.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Automatically clears unpaid payment lines when product quantities are
+                                            changed.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Automatically clears unpaid payment lines when product prices are modified.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Automatically clears unpaid payment lines when discounts are applied or
+                                            updated.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Prevents incorrect or outdated payment amounts from being applied to
+                                            modified orders.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Improves cashier workflow and reduces POS errors by ensuring payment
+                                            accuracy.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Ensures accurate order totals before validation, preventing accounting
+                                            inconsistencies.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Only clears unpaid payment lines - completed payments remain untouched for
+                                            data integrity.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Lightweight and performance-optimized with no impact on backend accounting
+                                            logic.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            No configuration required - works immediately after installation.
+                                        </li>
+                                        <li class="shadow rounded"
+                                            style="font-family: Montserrat; padding:20px; margin-bottom:20px; font-size:16px; color:#212121; font-weight:600; letter-spacing:1px; display:block; border-radius:15px !important;">
+    <span class="fa fa-check"
+          style="color:#3363c1; font-weight:600; font-size:18px; padding-right:10px"></span>
+                                            Compatible with Odoo 17.0 and fully integrated with the Point of Sale
+                                            module.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <style>
+                                .hco-section {
+                                    background: #fff;
+                                    border-radius: 14px;
+                                    padding: 30px;
+                                    margin-bottom: 40px;
+                                    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+                                    border: 1px solid #f1f1f1;
+                                }
+
+                                .hco-section h4 {
+                                    font-size: 22px;
+                                    font-weight: 700;
+                                    margin-bottom: 15px;
+                                    color: #333;
+                                }
+
+                                .hco-section h5 {
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    margin-top: 20px;
+                                    color: #444;
+                                }
+
+                                .hco-section p, .hco-section ul li {
+                                    font-size: 15px;
+                                    line-height: 1.7;
+                                    color: #555;
+                                }
+
+                                .hco-section img {
+                                    width: 100%;
+                                    border-radius: 12px;
+                                    border: 1px solid #faad18;
+                                    margin-top: 20px;
+                                    image-rendering: auto;
+                                }
+
+                                .hco-container {
+                                    max-width: 1000px;
+                                    margin: auto;
+                                }
+                            </style>
+                            <div class="tab-pane" id="hco_screen">
+                                <!-- 1. -->
+                                <div class="hco-section">
+                                    <h4>POS Payment Line Update Installation</h4>
+                                    <p>Go to the <strong>Apps</strong> menu in Odoo.</p>
+                                    <p>Remove the <strong>Apps</strong> filter and search for <strong>POS Payment Line
+                                        Update</strong>.</p>
+                                    <p>Click <strong>Install</strong>.</p>
+                                    <p style="font-family: Montserrat; color:#666; font-size:14px; margin-top:15px;">
+                                        The module will be installed and activated automatically. No additional
+                                        configuration is required. The module works immediately after installation.
+                                    </p>
+                                </div>
+
+                                <!-- 2. -->
+                                <div class="hco-section">
+                                    <h4>How It Works</h4>
+                                    <p>
+                                        Once installed, the module automatically monitors POS order changes and clears
+                                        unpaid payment lines whenever the order is modified. This ensures that payment
+                                        amounts always match the current order total.
+                                    </p>
+                                    <p><strong>Before Installation:</strong></p>
+                                    <ul>
+                                        <li>Payment lines may remain partially applied even after order changes</li>
+                                        <li>Cashiers may see incorrect payment totals when products are modified</li>
+                                        <li>Potential for accounting inconsistencies due to mismatched payments</li>
+                                    </ul>
+                                    <p><strong>After Installation:</strong></p>
+                                    <ul>
+                                        <li>Unpaid payment lines are automatically cleared when products are
+                                            added/removed
+                                        </li>
+                                        <li>Unpaid payment lines are automatically cleared when quantities change</li>
+                                        <li>Unpaid payment lines are automatically cleared when prices or discounts
+                                            change
+                                        </li>
+                                        <li>Completed payments remain untouched for data integrity</li>
+                                        <li>Payment process always reflects the latest order state</li>
+                                    </ul>
+                                    <p style="font-family: Montserrat; color:#666; font-size:14px; margin-top:15px;">
+                                        The module uses JavaScript patches to extend the POS Order and Orderline models,
+                                        ensuring seamless integration with Odoo's Point of Sale system.
+                                    </p>
+                                </div>
+
+                                <!-- 3. -->
+                                <div class="hco-section">
+                                    <h4>POS Workflow Example</h4>
+                                    <p>
+                                        In a typical POS scenario, cashiers frequently modify orders before finalizing
+                                        payment:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Scenario 1:</strong> Customer adds an item after partial payment -
+                                            unpaid payment lines are cleared
+                                        </li>
+                                        <li><strong>Scenario 2:</strong> Customer changes quantity - unpaid payment
+                                            lines are cleared
+                                        </li>
+                                        <li><strong>Scenario 3:</strong> Cashier applies discount - unpaid payment lines
+                                            are cleared
+                                        </li>
+                                        <li><strong>Scenario 4:</strong> Customer removes an item - unpaid payment lines
+                                            are cleared
+                                        </li>
+                                    </ul>
+                                    <p style="font-family: Montserrat; color:#666; font-size:14px; margin-top:15px;">
+                                        This ensures that cashiers always start with a clean payment slate when order
+                                        details change, preventing errors and ensuring accurate totals.
+                                    </p>
+                                </div>
+
+                                <!-- 4. -->
+                                <div class="hco-section">
+                                    <h4>Benefits for Retail Operations</h4>
+                                    <p>
+                                        The automatic payment line clearing provides several benefits:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Eliminates Payment Mismatches:</strong> Prevents incorrect payment
+                                            amounts from being applied to modified orders
+                                        </li>
+                                        <li><strong>Reduces Cashier Mistakes:</strong> Cashiers don't need to manually
+                                            clear payments when orders change
+                                        </li>
+                                        <li><strong>Improves POS Reliability:</strong> Ensures payment accuracy and
+                                            reduces accounting errors
+                                        </li>
+                                        <li><strong>Faster Checkout:</strong> Streamlines the payment process by
+                                            automatically maintaining order-payment consistency
+                                        </li>
+                                        <li><strong>Better Audit Trails:</strong> Ensures accurate order totals before
+                                            validation for compliance
+                                        </li>
+                                    </ul>
+                                    <p style="font-family: Montserrat; color:#666; font-size:14px; margin-top:15px;">
+                                        Ideal for retail stores, restaurants, and high-volume POS environments where
+                                        orders are frequently modified before payment validation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Support Tab -->
+                            <div class="tab-pane" id="hco_support">
+                                <div class="hco-section">
+                                    <h4>Support & Contact Information</h4>
+                                    <p style="font-size: 18px; margin-bottom: 20px;">
+                                        We're here to help you with any questions or issues regarding the POS Payment
+                                        Line Update module.
+                                    </p>
+
+                                    <h5>LinkedIn</h5>
+                                    <p>
+                                        <strong>Profile:</strong> <a
+                                            href="https://www.linkedin.com/in/hcodoo-tech-191311391" target="_blank"
+                                            style="color:#6B3F5C;">HCOdooTech LinkedIn</a>
+                                    </p>
+                                    <p>Connect with us on LinkedIn for updates, support, and community discussions.</p>
+
+                                    <h5>Module Information</h5>
+                                    <ul>
+                                        <li><strong>Version:</strong> 17.0.1.0.0</li>
+                                        <li><strong>Author:</strong> HCOdooTech</li>
+                                        <li><strong>Category:</strong> Sales/Point of Sale</li>
+                                        <li><strong>License:</strong> OPL-1</li>
+                                        <li><strong>Odoo Version:</strong> 17.0</li>
+                                        <li><strong>Price:</strong> $8.99 USD</li>
+                                        <li><strong>Dependencies:</strong> point_of_sale</li>
+                                    </ul>
+
+                                    <h5>Technical Support</h5>
+                                    <p>
+                                        For technical issues, please include the following information in your support
+                                        request:
+                                    </p>
+                                    <ul>
+                                        <li>Odoo version (must be 17.0)</li>
+                                        <li>Module version (17.0.1.0.0)</li>
+                                        <li>Error messages or logs</li>
+                                        <li>Steps to reproduce the issue</li>
+                                        <li>Screenshots if applicable</li>
+                                        <li>Browser console errors (if any)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Tab -->
+                            <div class="tab-pane" id="hco_faq">
+                                <div class="hco-section">
+                                    <h4>Frequently Asked Questions</h4>
+
+                                    <h5>1. What is POS Payment Line Update?</h5>
+                                    <p>
+                                        POS Payment Line Update is an Odoo 17 module that automatically clears unpaid
+                                        payment lines whenever a POS order is modified. It ensures payment accuracy by
+                                        resetting unpaid payments when products, quantities, prices, or discounts
+                                        change,
+                                        preventing incorrect totals and accounting inconsistencies.
+                                    </p>
+
+                                    <h5>2. What are the system requirements?</h5>
+                                    <p>
+                                    <ul>
+                                        <li>Odoo 17.0</li>
+                                        <li>Required Odoo module: point_of_sale (must be installed)</li>
+                                    </ul>
+                                    </p>
+
+                                    <h5>3. How do I install the module?</h5>
+                                    <p>
+                                        Go to Apps menu, remove the Apps filter, search for "POS Payment Line Update",
+                                        and click Install. No additional configuration is required - the module works
+                                        immediately after installation.
+                                    </p>
+
+                                    <h5>4. Does this module affect completed payments?</h5>
+                                    <p>
+                                        No, the module only clears unpaid payment lines. Completed payments (with status
+                                        "done" or "reversed") remain untouched to maintain data integrity. The module
+                                        intelligently distinguishes between paid and unpaid payment lines.
+                                    </p>
+
+                                    <h5>5. When are payment lines cleared?</h5>
+                                    <p>
+                                        Unpaid payment lines are automatically cleared when:
+                                    </p>
+                                    <ul>
+                                        <li>Products are added to the order</li>
+                                        <li>Products are removed from the order</li>
+                                        <li>Product quantities are changed</li>
+                                        <li>Product prices are modified</li>
+                                        <li>Discounts are applied or updated</li>
+                                    </ul>
+
+                                    <h5>6. Will this work with all payment methods?</h5>
+                                    <p>
+                                        Yes, the module works with all payment methods supported by Odoo POS (cash,
+                                        bank,
+                                        credit card, etc.). It clears unpaid payment lines regardless of the payment
+                                        method type.
+                                    </p>
+
+                                    <h5>7. Does this affect performance?</h5>
+                                    <p>
+                                        No, the module is lightweight and uses JavaScript patches to extend POS models.
+                                        It only executes when order modifications occur and has minimal performance
+                                        impact.
+                                        The clearing operation is fast and efficient.
+                                    </p>
+
+                                    <h5>8. Is this compatible with other POS modules?</h5>
+                                    <p>
+                                        The module uses JavaScript patch mechanism, which is the standard Odoo way of
+                                        extending models. It should be compatible with most POS-related modules. If you
+                                        encounter conflicts with other modules, please contact support.
+                                    </p>
+
+                                    <h5>9. Can I uninstall the module?</h5>
+                                    <p>
+                                        Yes, you can uninstall the module at any time through the Apps menu.
+                                        Uninstalling will restore the default POS behavior (payment lines may remain
+                                        after
+                                        order changes) without affecting your data or completed orders.
+                                    </p>
+
+                                    <h5>10. What if I want to keep some unpaid payment lines after order changes?</h5>
+                                    <p>
+                                        The current version automatically clears all unpaid payment lines when the order
+                                        is modified. This is by design to ensure payment accuracy. If you need different
+                                        behavior, please contact support to discuss customization options.
+                                    </p>
+
+                                    <h5>11. Does this work with multi-currency POS?</h5>
+                                    <p>
+                                        Yes, the module works with all POS configurations including multi-currency
+                                        setups.
+                                        It clears unpaid payment lines regardless of currency, ensuring payment accuracy
+                                        across all currency types.
+                                    </p>
+
+                                    <h5>12. Will this work with POS orders that are already in progress?</h5>
+                                    <p>
+                                        Yes, the module works with all POS orders, including those already in progress.
+                                        When you modify an existing order, unpaid payment lines will be cleared
+                                        automatically. Completed payments remain untouched.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+</body>
+</html>
